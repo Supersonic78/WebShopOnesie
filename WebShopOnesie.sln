@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShopOnesie", "WebShopOnesie\WebShopOnesie.csproj", "{7041AE4B-D3E7-48D3-8885-561E6F2B8AB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{B938CE82-43D1-4719-8CDE-C047D69B8F17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{1A39110B-6C89-4DC0-A3A5-A0804910B6D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7041AE4B-D3E7-48D3-8885-561E6F2B8AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7041AE4B-D3E7-48D3-8885-561E6F2B8AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7041AE4B-D3E7-48D3-8885-561E6F2B8AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7041AE4B-D3E7-48D3-8885-561E6F2B8AB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B938CE82-43D1-4719-8CDE-C047D69B8F17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B938CE82-43D1-4719-8CDE-C047D69B8F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B938CE82-43D1-4719-8CDE-C047D69B8F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B938CE82-43D1-4719-8CDE-C047D69B8F17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A39110B-6C89-4DC0-A3A5-A0804910B6D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A39110B-6C89-4DC0-A3A5-A0804910B6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A39110B-6C89-4DC0-A3A5-A0804910B6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A39110B-6C89-4DC0-A3A5-A0804910B6D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
