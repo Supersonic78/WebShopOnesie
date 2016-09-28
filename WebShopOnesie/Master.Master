@@ -121,11 +121,11 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="/pages/pictures.html">Pictures <span class="sr-only">(current)</span></a></li>
-                            <li><a href="Categories.aspx">Categories</a></li>
-                            <li><a href="game.html">Game</a></li>
+                            <li><a href="Categories.aspx">Products</a></li>
+                
                             <li><a href="contact.aspx">Contact</a></li>
                             <li><a href="about.aspx">About</a></li>
-                            <li><a href="reviews.html">Reviews</a></li>
+                    
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div>
