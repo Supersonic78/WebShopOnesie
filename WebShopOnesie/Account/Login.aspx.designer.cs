@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebShopOnesie.Account
-{
-
-
-    public partial class Login
-    {
-
+namespace WebShopOnesie.Account {
+    
+    
+    public partial class Login {
+        
         /// <summary>
         /// ChbRemember control.
         /// </summary>
@@ -24,4 +22,3 @@ namespace WebShopOnesie.Account
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox ChbRemember;
     }
 }
-
