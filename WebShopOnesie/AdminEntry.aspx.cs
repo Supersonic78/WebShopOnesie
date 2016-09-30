@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WebShopOnesie
 {
-    public partial class Contact : Page
+    public partial class AdminEntry : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

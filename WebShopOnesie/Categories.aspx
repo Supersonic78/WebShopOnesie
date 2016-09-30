@@ -20,12 +20,13 @@
         <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" />
         <asp:BoundField DataField="ProductPrice" HeaderText="ProductPrice" SortExpression="ProductPrice" />
         <asp:BoundField DataField="ProductDescription" HeaderText="ProductDescription" SortExpression="ProductDescription" />
-        <asp:BoundField DataField="ImagePath" HeaderText="ImagePath" SortExpression="ImagePath" />
     </Columns>
 </asp:GridView>
+
+            <asp:ListView ID="ListView1" runat="server"></asp:ListView>
             </div>
         
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+ 
         
    
     </asp:Content>
