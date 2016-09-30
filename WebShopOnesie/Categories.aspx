@@ -14,21 +14,15 @@
     
     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         <div id="oo">
-          <asp:ListView ID="ListView3" runat="server" >
-    <LayoutTemplate>
-        <ul>
-            <asp:PlaceHolder ID="itemPlaceholder" runat="server"  />    
-        </ul>                
-    </LayoutTemplate>
-    <ItemTemplate>
-        <li>
-             <a id ="cat" href ="/Products.aspx?id=<%# Container.DataItem %>"><%# Container.DataItem %> </a>
-        </li>
-    </ItemTemplate>
-    <EmptyDataTemplate>
-        <p>Nothing here.</p> 
-    </EmptyDataTemplate>
-</asp:ListView>
+         <asp:GridView ID="GridView1" runat="server"  AutoGenerateColumns="False">
+    <Columns>
+        <asp:HyperLinkField DataTextField="ProductID" HeaderText="ProductID" DataNavigateUrlFields="ProductID" DataNavigateUrlFormatString="/ProductDetail.aspx?ID={0}"/>
+        <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" />
+        <asp:BoundField DataField="ProductPrice" HeaderText="ProductPrice" SortExpression="ProductPrice" />
+        <asp:BoundField DataField="ProductDescription" HeaderText="ProductDescription" SortExpression="ProductDescription" />
+        <asp:BoundField DataField="ImagePath" HeaderText="ImagePath" SortExpression="ImagePath" />
+    </Columns>
+</asp:GridView>
             </div>
         
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>

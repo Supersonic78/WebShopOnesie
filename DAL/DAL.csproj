@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="ConnectionLayer\ProductDataAccessLayer.cs" />
-    <Compile Include="ConnectionLayer\ProductLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +124,12 @@
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DomainObjects\DomainObjects.csproj">
+      <Project>{43444e8c-bfc6-49f1-a344-37db11c5594c}</Project>
+      <Name>DomainObjects</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

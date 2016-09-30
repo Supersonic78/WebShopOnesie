@@ -20,7 +20,7 @@ namespace WebShopOnesie
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<string> categories = _businessLogic.GetCategories();
+            List<string> categories = BL.BusinessLogic.GetCategories();
 
             ListView1.DataSource = categories;
             ListView1.DataBind();

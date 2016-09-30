@@ -1,28 +1,24 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAL.ConnectionLayer;
+using WebShopOnesie;
+using DomainObjects;
 
 namespace BL
 {
     public class BusinessLogic
     {
-        private ProductLayer _productLayer;
-
-        public BusinessLogic()
+        
+        public static List<string> GetCategories()
         {
-            _productLayer = new ProductLayer();
+            return ProductDataAccessLayer.GetCategories();
         }
-
-        public List<string> GetCategories()
+        public static List<Product> GetProductsByCategoryName(string categoryName)
         {
-            return _productLayer.GetCategories();
+            return ProductDataAccessLayer.GetAllProductsByCategoryName(categoryName);
         }
-        public List<string> GetProducts()
+        public static Product GetProductByID(int productID)
         {
-            return _productLayer.GetProducts();
+            return ProductDataAccessLayer.GetProductByID(productID);
         }
 
     }

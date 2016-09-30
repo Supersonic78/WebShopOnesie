@@ -48,6 +48,10 @@
       <Project>{b938ce82-43d1-4719-8cde-c047d69b8f17}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DomainObjects\DomainObjects.csproj">
+      <Project>{43444e8c-bfc6-49f1-a344-37db11c5594c}</Project>
+      <Name>DomainObjects</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\bootstrap-select.css.map" />

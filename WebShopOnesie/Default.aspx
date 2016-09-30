@@ -15,15 +15,15 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="images/childish-onesies.png" alt="one" />
+      <img src="images/slide1.jpg" alt="one" />
     </div>
 
     <div class="item">
-      <img src="images/tropical1.PNG" alt="Chania"/>
+      <img src="images/slide2.jpg" alt="Chania"/>
     </div>
 
     <div class="item">
-      <img src="images/vaadhoo.png" alt="aa" />
+      <img src="images/slide3.jpg" alt="aa" />
     </div>
 
     

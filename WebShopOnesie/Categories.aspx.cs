@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DomainObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,27 +15,17 @@ namespace WebShopOnesie
             //Label1.Text = Request.QueryString["id"];
             string text = Request.QueryString["id"];
           
-           if(text.Equals("Men"))
-            {
-               Label1.Text = "List Men stuff";
-                BL.BusinessLogic b = new BL.BusinessLogic();
-                List<string> products = b.GetProducts();
+         
+               Label1.Text = $"List {text} stuff";
+              
+                List<Product> products = BL.BusinessLogic.GetProductsByCategoryName(text);
 
 
-                ListView3.DataSource = products;
-                ListView3.DataBind();
+                GridView1.DataSource = products;
+                GridView1.DataBind();
 
 
 
-            }
-            else if (text.Equals("Women"))
-            {
-                Label1.Text = "List Women stuff";
-            }
-            else if(text.Equals("Kids"))
-            {
-                Label1.Text = "List Kids stuff";
-            }
         }
     }
 }
