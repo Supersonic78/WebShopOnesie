@@ -1,4 +1,4 @@
-﻿C:\Users\supersonic\Documents\Visual Studio 2015\Projects\DotNetFramework\WebShopOnesie\WebShopOnesie\Default.aspx<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WebShopOnesie.Contact" %>
+﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WebShopOnesie.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="head" runat="server">
     <h2><%: Title %>.</h2>
