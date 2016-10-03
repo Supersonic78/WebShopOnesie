@@ -106,5 +106,49 @@ namespace WebShopOnesie
             }
             return product;
         }
+
+        public static List<Product> GetProductBySearchText(string searchText)
+        {
+            List<Product> listProducts = new List<Product>();
+            string CS = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                string sql = $@"select *
+                    from tblproduct
+                    where ProductName like '%{searchText}%'";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                con.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    Product product = new Product();
+                    product.ProductID = Convert.ToInt32(rdr["ProductID"]);
+                    product.ProductName = rdr["ProductName"].ToString();
+                    product.ProductDescription = rdr["ProductDescription"].ToString();
+                    product.ImagePath = rdr["ImagePath"].ToString();
+                    product.ProductPrice = Convert.ToDouble(rdr["ProductPrice"]);
+                    listProducts.Add(product);
+                }
+
+            }
+            return listProducts;
+        }
+        //static void AddUser()
+        //{
+
+        //    string CS = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
+        //    using (SqlConnection con = new SqlConnection(CS))
+        //    {
+        //        string sql = "Insert Into Customer (FirstName, LastName) Values('" + fName + "','" + lName + "')";
+
+        //        SqlCommand insertCmd = new SqlCommand(sql, con);
+        //        if (insertCmd.ExecuteNonQuery() > 0)
+        //        {
+
+        //        }
+
+        //    }
+
+        //}
     }
 }
