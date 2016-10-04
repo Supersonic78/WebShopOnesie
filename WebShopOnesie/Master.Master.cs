@@ -23,11 +23,15 @@ namespace WebShopOnesie
         {
             if (Session["login"] != null)
             {
-                lbluser.Text = Session["login"].ToString();
+                lbluser.Text = "Welcome Back: " + Session["login"].ToString();
+                Panel1.Visible = true;
+                Panel2.Visible = false;
             }
             else
             {
-
+                Panel1.Visible = false;
+                Panel2.Visible = true;
+                lbluser.Text = null;
             }
 
 
