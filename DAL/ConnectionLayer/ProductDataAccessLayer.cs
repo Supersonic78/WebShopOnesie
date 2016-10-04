@@ -136,64 +136,39 @@ namespace WebShopOnesie
             }
             return customer;
         }
-        //public static List<Customer> GetRegister()
-        //{
-        //    List<Customer> listcustomer = new List<Customer>();
-        //    string CS = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
-        //    using (SqlConnection con = new SqlConnection(CS))
-        //    {
-        //        SqlCommand cmd = new SqlCommand("insert into * from tblCustomer values", con);
-        //        con.Open();
-        //         cmd.ExecuteNonQuery();
-        //        //while (rdr.Read())
-        //        //{
-        //        //    Customer customer = new Customer();
-        //        //    customer.CustomerId = Convert.ToInt32(rdr["CustomerId"]);
-        //        //    customer.FirstName = rdr["FirstName"].ToString();
-        //        //    customer.LastName = rdr["LastName"].ToString();
-        //        //    customer.Adress = rdr["Adress"].ToString();
-        //        //    customer.PhoneNumber = Convert.ToInt32(rdr["PhoneNumber"]);
-        //        //    customer.Email = rdr["Email"].ToString();
-        //        //    customer.Password = rdr["Password"].ToString();
-        //        //    customer.City = rdr["City"].ToString();
-        //        //    customer.Zip = Convert.ToInt32(rdr["Zip"]);
-
-        //        //    listcustomer.Add(customer);
-        //        //}
-        //    }
-        //    return listcustomer;
-        public void InsertRegister(string firstName, string lastName, string adress, string password, int phonenumder, string email, int zip, string city)
-        {
-            int rows =0;
-            try {
-                Customer customer = new Customer();
+        
+        public static int InsertRegister(Customer customer)
+        {            
+            var rows = 0;           
+            try
+            {               
                 string sql = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
                 using (SqlConnection con = new SqlConnection(sql))
                 {
-                    string reg = "Insert Into Customer (FirstName, LastName, Adress, PhoneNumber, Email, Password, City, Zip) Values('" + firstName + "','" + lastName + "','" + adress + "','" + password + "','" + phonenumder + "','" + email + "','" + zip + "','" + city + "')";
+                    string reg = $"Insert Into Customer (FirstName, LastName, Adress, PhoneNumber, Email, Password, City, Zip)"+ $"Values (' { customer.FirstName}  ','  { customer.LastName}  ','  {customer.Adress } ','  {customer.Password } ','  { customer.Email} ',' {customer.Zip} ',' {customer.City} )";
+
                     SqlCommand cmd = new SqlCommand(reg, con);
                     con.Open();
                     rows = cmd.ExecuteNonQuery();
+
+                    //customer.CustomerId = Convert.ToInt32(rdr["CustomerId"]);
+                    //customer.FirstName = rdr["FirstName"].ToString();
+                    //customer.LastName = rdr["LastName"].ToString();
+                    //customer.Adress = rdr["Adress"].ToString();
+                    //customer.PhoneNumber = Convert.ToInt32(rdr["PhoneNumber"]);
+                    //customer.Email = rdr["Email"].ToString();
+                    //customer.Password = rdr["Password"].ToString();
+                    //customer.City = rdr["City"].ToString();
+                    //customer.Zip = Convert.ToInt32(rdr["Zip"]);
+                    //customer.
                 }
             }
             catch
             {
-                ;
-            }
-                //customer.CustomerId = Convert.ToInt32(rdr["CustomerId"]);
-                //customer.FirstName = rdr["FirstName"].ToString();
-                //customer.LastName = rdr["LastName"].ToString();
-                //customer.Adress = rdr["Adress"].ToString();
-                //customer.PhoneNumber = Convert.ToInt32(rdr["PhoneNumber"]);
-                //customer.Email = rdr["Email"].ToString();
-                //customer.Password = rdr["Password"].ToString();
-                //customer.City = rdr["City"].ToString();
-                //customer.Zip = Convert.ToInt32(rdr["Zip"]);
-
+                
             }
             return rows;
-        }
-        
 
+        }
     }
 }

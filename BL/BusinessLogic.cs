@@ -25,9 +25,9 @@ namespace BL
         {
             return ProductDataAccessLayer.customer(email, pass);
         }
-        public static Customer InsertRegister(string firstName, string lastName, string adress, string password, int phonenumder, string email, int zip, string city)
+        public static int InsertRegister(Customer c)
         {
-            return ProductDataAccessLayer.customer( firstName,  lastName,  adress,  password,  phonenumder,  email,  zip,  city);
+            return ProductDataAccessLayer.InsertRegister(c);
         }
     }
 }

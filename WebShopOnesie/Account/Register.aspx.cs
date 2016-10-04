@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DomainObjects;
 
 namespace WebShopOnesie.Account
 {
@@ -18,7 +19,18 @@ namespace WebShopOnesie.Account
         {
             {
 
-                var user = BL.BusinessLogic.InsertRegister(txtEmail.Text, txtpassword.Text, txtphonenumber.Text, txtcity.Text, txtEmail.Text, txtzipcod.Text, txtcity.Text);
+                var user = new Customer();
+
+                user.FirstName = txtfirstName.Text;
+                user.LastName = txtLastname.Text;
+                user.Adress = txtAdress.Text;
+                user.PhoneNumber = txtphonenumber.Text;
+                user.Email =txtEmail.Text;
+                user.Password = txtpassword.Text;
+                user.City =txtcity.Text;
+                user.Zip = txtzipcod.Text;
+                BL.BusinessLogic.InsertRegister(user);
+
                 if (!string.IsNullOrEmpty(user?.Email) && !string.IsNullOrEmpty(user.Password))
                 {
                     //HttpCookie c = new HttpCookie("login");
