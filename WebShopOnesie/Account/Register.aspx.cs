@@ -29,18 +29,10 @@ namespace WebShopOnesie.Account
                 user.Password = txtpassword.Text;
                 user.City =txtcity.Text;
                 user.Zip = txtzipcod.Text;
-                //BL.BusinessLogic.InsertRegister(user);
+                BL.BusinessLogic.AddUser(user);
 
                 if (!string.IsNullOrEmpty(user?.Email) && !string.IsNullOrEmpty(user.Password))
                 {
-                    //HttpCookie c = new HttpCookie("login");
-                    Session["login"] = user.FirstName;
-
-                    //if (ChkRemember.Checked)
-                    //{
-                    //    //Session["login"]
-                    //}
-
                     Response.Redirect("~/Default.aspx");
                 }
                 else

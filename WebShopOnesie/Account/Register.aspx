@@ -51,7 +51,7 @@
                         <div class="control-group">
                             <label class="control-label" for="password">Password</label>
                             <div class="controls">
-                                <asp:TextBox ID="txtpassword" runat="server" class="form-control input-lg" ></asp:TextBox>
+                                <asp:TextBox ID="txtpassword" runat="server" class="form-control input-lg" TextMode="Password" ></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtpassword" ErrorMessage="inter password"></asp:RequiredFieldValidator>
                                 <%--<input name="password" class="form-control input-lg" id="password" type="password" placeholder="">--%>
                                 <p class="help-block">Password should be at least 6 characters</p>
@@ -61,7 +61,7 @@
                         <div class="control-group">
                             <label class="control-label" for="password_confirm">Password (Confirm)</label>
                             <div class="controls">
-                                <asp:TextBox ID="txtpasswordconfirm" runat="server" class="form-control input-lg"></asp:TextBox>
+                                <asp:TextBox ID="txtpasswordconfirm" runat="server" class="form-control input-lg" TextMode="Password"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtpasswordconfirm" ErrorMessage="inter password again"></asp:RequiredFieldValidator>
                                 <%--<input name="password_confirm" class="form-control input-lg" id="password_confirm" type="password" placeholder="">--%>
                                 <p class="help-block">Please confirm password</p>

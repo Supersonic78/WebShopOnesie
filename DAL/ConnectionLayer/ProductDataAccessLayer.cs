@@ -133,20 +133,22 @@ namespace WebShopOnesie
             }
             return listProducts;
         }
-        //static void AddUser()
-        //{
+       public static int AddUser(Customer cust)
+        {
+            int result = 0;
+            var cus = new Customer();
+            string CS = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                var sql = $"INSERT INTO tblCustomer(FirstName,LastName,Adress,PhoneNumber,Email,Password,City,Zip)"+$"VALUES('{cus.FirstName}','{cus.LastName}','{cus.Adress}','{cus.PhoneNumber}','{cus.Email}','{cus.Password}', '{cus.City}','{cus.Zip}')";
 
-        //    string CS = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
-        //    using (SqlConnection con = new SqlConnection(CS))
-        //    {
-        //        string sql = "Insert Into Customer (FirstName, LastName) Values('" + fName + "','" + lName + "')";
-
-        //        SqlCommand insertCmd = new SqlCommand(sql, con);
-        //        if (insertCmd.ExecuteNonQuery() > 0)
-        //        {
-        //        }
-        //    }
-        //}
+                var insertCmd = new SqlCommand(sql, con);
+                con.Open();
+                result =insertCmd.ExecuteNonQuery();   
+            }
+           
+            return result;
+        }
         public static Customer GetUserLogin(string email, string pass)
         {
             var cus = new Customer();
@@ -164,5 +166,7 @@ namespace WebShopOnesie
             }
             return cus;
         }
+
+
     }
 }

@@ -25,9 +25,9 @@ namespace BL
         {
             return ProductDataAccessLayer.GetUserLogin(email, pass);
         }
-        //public static int InsertRegister(Customer c)
-        //{
-        //    return ProductDataAccessLayer.in(c);
-        //}
+        public static int AddUser(Customer c)
+        {
+            return ProductDataAccessLayer.AddUser(c);
+        }
     }
 }
