@@ -35,7 +35,7 @@ namespace WebShopOnesie
 
         protected void SearchButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect($"Search.aspx?text={SearchField.Text}");
+            Response.Redirect($"Categories.aspx?id={SearchField.Text}");
         }
         //protected void Page_Load2(object sender, EventArgs e)
         //{

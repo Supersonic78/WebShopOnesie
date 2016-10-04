@@ -43,7 +43,7 @@ namespace WebShopOnesie
             {
                 string sql = $@"select tblProduct.*
                     from tblProduct join tblCategory on tblProduct.CategoryID = tblCategory.CategoryID
-                    where CategoryName = '{categoryName}'";
+                    where CategoryName = '{categoryName}' or ProductName = '{categoryName}'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 con.Open();
                 SqlDataReader rdr = cmd.ExecuteReader();
@@ -113,9 +113,9 @@ namespace WebShopOnesie
             string CS = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
             using (SqlConnection con = new SqlConnection(CS))
             {
-                string sql = $@"select *
-                    from tblproduct
-                    where ProductName like '%{searchText}%'";
+              string sql = $@"select tblProduct.*
+                    from tblProduct join tblCategory on tblProduct.CategoryID = tblCategory.CategoryID
+                    where CategoryName = '{searchText}' or ProductName = '{searchText}'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 con.Open();
                 SqlDataReader rdr = cmd.ExecuteReader();

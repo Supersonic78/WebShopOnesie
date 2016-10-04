@@ -50,23 +50,7 @@
                                     </li>
                                 </ItemTemplate>
                             </asp:ListView>
-
-                            <%--
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
-                          <ul class="dropdown-menu">
-
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                          </ul>
-                        </li>--%>
-                            
-                            
+              
                             <li><a runat="server" href="~/About.aspx">About</a></li>
                             <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
                         </ul>
@@ -91,42 +75,8 @@
                 </div>
                 <!-- /.container-fluid -->
             </nav>
-            <%--<asp:ListView ID="ListView1" runat="server">
-                <LayoutTemplate>
-                    <li class="dropdown">
-                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                              aria-expanded="false">Products <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
-                    </ul>
-                        </li>
-                </LayoutTemplate>
-                <ItemTemplate>
-                    <li>
-                        <a id="cat" href="/Categories.aspx?id=<%# Container.DataItem %>"><%# Container.DataItem %></a>
-                    </li>
-                </ItemTemplate>
-                <EmptyDataTemplate>
-                    <p>Nothing here.</p>
-                </EmptyDataTemplate>
-            </asp:ListView>--%>
-
-            <asp:ListView ID="ListView2" runat="server">
-                <LayoutTemplate>
-                    <ul>
-                        <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
-                    </ul>
-                </LayoutTemplate>
-                <ItemTemplate>
-                    <li id="ListItem2">
-                        <a href="/Products.aspx?id=<%# Container.DataItem %>"><%# Container.DataItem %> </a>
-                    </li>
-                </ItemTemplate>
-                <EmptyDataTemplate>
-                    <p>Nothing here.</p>
-                </EmptyDataTemplate>
-            </asp:ListView>
-
+      
+      
 
 
 
@@ -141,9 +91,9 @@
 
 
 
-        <div id="footer" class="footer">
+     <%--   <div id="footer" class="footer">
             <h1>Copyright Onesie Island Group 2005</h1>
-        </div>
+        </div>--%>
     </form>
 </body>
 </html>

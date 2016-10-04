@@ -14,8 +14,8 @@ namespace WebShopOnesie
         {
             string text = Request.QueryString["text"];
             List<Product> products = BL.BusinessLogic.GetProductBySearchText(text);
-            GridView1.DataSource = products;
-            GridView1.DataBind();
+            productsList.DataSource = products;
+            productsList.DataBind();
         }
     }
 }

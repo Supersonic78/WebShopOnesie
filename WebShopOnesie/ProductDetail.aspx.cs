@@ -13,12 +13,15 @@ namespace WebShopOnesie
         protected void Page_Load(object sender, EventArgs e)
         {
             string text = Request.QueryString["id"];
-            int productID = int.Parse(text);
+
+            Label1.Text = $"List {text} stuff";
+            int productID = Int32.Parse(text);
             Product product = BL.BusinessLogic.GetProductByID(productID);
             ProductName.Text = product.ProductName;
             Price.Text = product.ProductPrice.ToString();
             Image1.ImageUrl = $"~/images/{product.ImagePath}";
             
+
         }
     }
 }
