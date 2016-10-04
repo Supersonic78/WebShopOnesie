@@ -40,13 +40,22 @@ namespace WebShopOnesie {
         protected global::System.Web.UI.WebControls.ListView ListView1;
         
         /// <summary>
-        /// ListView2 control.
+        /// SearchField control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListView2;
+        protected global::System.Web.UI.WebControls.TextBox SearchField;
+        
+        /// <summary>
+        /// SearchButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SearchButton;
         
         /// <summary>
         /// ContentPlaceHolder1 control.
