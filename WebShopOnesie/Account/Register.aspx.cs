@@ -29,12 +29,12 @@ namespace WebShopOnesie.Account
                 user.Password = txtpassword.Text;
                 user.City =txtcity.Text;
                 user.Zip = txtzipcod.Text;
-                BL.BusinessLogic.InsertRegister(user);
+                //BL.BusinessLogic.InsertRegister(user);
 
                 if (!string.IsNullOrEmpty(user?.Email) && !string.IsNullOrEmpty(user.Password))
                 {
                     //HttpCookie c = new HttpCookie("login");
-                    //Session["login"] = txtUserName.Text;
+                    Session["login"] = user.FirstName;
 
                     //if (ChkRemember.Checked)
                     //{

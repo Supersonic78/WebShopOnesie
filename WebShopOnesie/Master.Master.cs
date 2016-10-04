@@ -1,4 +1,5 @@
 ﻿using BL;
+using DomainObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,17 @@ namespace WebShopOnesie
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["login"] != null)
+            {
+                lbluser.Text = Session["login"].ToString();
+            }
+            else
+            {
+
+            }
+
+
+
             List<string> categories = BL.BusinessLogic.GetCategories();
 
             ListView1.DataSource = categories;

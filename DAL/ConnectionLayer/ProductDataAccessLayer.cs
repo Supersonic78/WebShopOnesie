@@ -144,11 +144,25 @@ namespace WebShopOnesie
         //        SqlCommand insertCmd = new SqlCommand(sql, con);
         //        if (insertCmd.ExecuteNonQuery() > 0)
         //        {
-
         //        }
-
         //    }
-
         //}
+        public static Customer GetUserLogin(string email, string pass)
+        {
+            var cus = new Customer();
+            string CS = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+               
+                string sql = $"SELECT Email ='{email}', Password = '{pass}' from tblCustomer";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                con.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+                rdr.Read();
+                cus.Email=rdr["Email"].ToString();
+                cus.Password = rdr["Password"].ToString();
+            }
+            return cus;
+        }
     }
 }

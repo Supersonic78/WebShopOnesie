@@ -23,11 +23,11 @@ namespace BL
 
         public static Customer login(string email, string pass)
         {
-            return ProductDataAccessLayer.customer(email, pass);
+            return ProductDataAccessLayer.GetUserLogin(email, pass);
         }
-        public static int InsertRegister(Customer c)
-        {
-            return ProductDataAccessLayer.InsertRegister(c);
-        }
+        //public static int InsertRegister(Customer c)
+        //{
+        //    return ProductDataAccessLayer.in(c);
+        //}
     }
 }

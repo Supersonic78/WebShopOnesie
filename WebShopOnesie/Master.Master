@@ -18,6 +18,7 @@
 <body>
     <form id="form1" runat="server">
         <div id="test1" class="container-fluid">
+            <asp:Label ID="lbluser" runat="server" Text="Label"></asp:Label>
             <img id="banner" src="../images/onesieislandx.png" />
             <nav class="navbar navbar-default">
                 <div class="container-fluid">

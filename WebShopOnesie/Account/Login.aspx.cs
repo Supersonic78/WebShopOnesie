@@ -22,9 +22,9 @@ namespace WebShopOnesie.Account
                
            var user= BL.BusinessLogic.login(txtEmail.Text, txtPassword.Text);
             if (!string.IsNullOrEmpty(user?.Email) && !string.IsNullOrEmpty(user.Password))
-            {
-                //HttpCookie c = new HttpCookie("login");
-                //Session["login"] = txtUserName.Text;
+            {                
+
+                Session["login"] = user.Email;
 
                 //if (ChkRemember.Checked)
                 //{
@@ -38,5 +38,6 @@ namespace WebShopOnesie.Account
                 lbllogin.Text = "User/Password incorrect";
             }
         }
+
     }
 }
