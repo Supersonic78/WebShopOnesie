@@ -13,5 +13,29 @@ namespace WebShopOnesie.Account
         {
 
         }
+
+        protected void btnregister_Click(object sender, EventArgs e)
+        {
+            {
+
+                var user = BL.BusinessLogic.InsertRegister(txtEmail.Text, txtpassword.Text, txtphonenumber.Text, txtcity.Text, txtEmail.Text, txtzipcod.Text, txtcity.Text);
+                if (!string.IsNullOrEmpty(user?.Email) && !string.IsNullOrEmpty(user.Password))
+                {
+                    //HttpCookie c = new HttpCookie("login");
+                    //Session["login"] = txtUserName.Text;
+
+                    //if (ChkRemember.Checked)
+                    //{
+                    //    //Session["login"]
+                    //}
+
+                    Response.Redirect("~/Default.aspx");
+                }
+                else
+                {
+                    btnregister.Text = "User/Password incorrect";
+                }
+            }
+        }
     }
 }

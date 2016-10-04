@@ -20,28 +20,14 @@ namespace BL
         {
             return ProductDataAccessLayer.GetProductByID(productID);
         }
-        public static List<Product> GetProductBySearchText(string searchText)
+
+        public static Customer login(string email, string pass)
         {
-            return ProductDataAccessLayer.GetProductBySearchText(searchText);
+            return ProductDataAccessLayer.customer(email, pass);
         }
-        //static void AddUser()
-        //{
-
-        //    string CS = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
-        //    using (SqlConnection con = new SqlConnection(CS))
-        //    {
-        //        connection.ConnectionString = @"Data Source=(local); Initial Catalog = Books; User ID = books; Password = books; Integrated Security = True";
-        //        connection.Open();
-
-        //        string sql =
-        //            "Insert Into Authors (FirstName, LastName) Values('" + fName + "','" + lName + "')";
-        //        SqlCommand insertCmd = new SqlCommand(sql, connection);
-        //        if (insertCmd.ExecuteNonQuery() > 0)
-        //        {
-        //            Console.WriteLine("Authors table is updated");
-        //        }
-
-        //    }
-
+        public static Customer InsertRegister(string firstName, string lastName, string adress, string password, int phonenumder, string email, int zip, string city)
+        {
+            return ProductDataAccessLayer.customer( firstName,  lastName,  adress,  password,  phonenumder,  email,  zip,  city);
         }
+    }
 }

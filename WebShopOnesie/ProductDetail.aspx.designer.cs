@@ -10,7 +10,7 @@
 namespace WebShopOnesie {
     
     
-    public partial class ProductDetail {
+    public partial class Products {
         
         /// <summary>
         /// Label1 control.
