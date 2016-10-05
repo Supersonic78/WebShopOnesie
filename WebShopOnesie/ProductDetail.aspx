@@ -6,8 +6,22 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+  <asp:ListView ID="productsList" runat="server">
+                <LayoutTemplate>
+                    <ul class="productList">
+                        <asp:PlaceHolder ID="itemPlaceHolder" runat="server"></asp:PlaceHolder>
+                    </ul>
+                </LayoutTemplate>
+                <ItemTemplate>
+                    <li>                  
+                        <img width="300" height="400" src="<%#Eval("ImagePath") %>" /><br /><p><%#Eval("ProductName") %></p><br /><br /><%#Eval("ProductDescription") %><p><bold>Pris: </bold><%#Eval("ProductPrice") %> kr</p>                       
+                    </li>                   
+                </ItemTemplate>
+                <EmptyDataTemplate>
+                    <div>
+                        No content here.
+                    </div>
+                </EmptyDataTemplate>
 
-    <asp:Label ID="ProductName" runat="server" Text="Label"></asp:Label>
-    <asp:Label ID="Price" runat="server" Text="Label"></asp:Label>
-    <asp:Image ID="Image1" runat="server" />
+            </asp:ListView>
 </asp:Content>

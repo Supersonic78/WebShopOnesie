@@ -14,16 +14,7 @@
     
     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         <div id="oo">
-         <%--<asp:GridView ID="GridView1" runat="server"  AutoGenerateColumns="False">
-    <Columns>
-        <asp:HyperLinkField DataTextField="ProductID" HeaderText="ProductID" DataNavigateUrlFields="ProductID" DataNavigateUrlFormatString="/ProductDetail.aspx?ID={0}"/>
-        <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" />
-        <asp:BoundField DataField="ProductPrice" HeaderText="ProductPrice" SortExpression="ProductPrice" />
-        <asp:BoundField DataField="ProductDescription" HeaderText="ProductDescription" SortExpression="ProductDescription" />
-    </Columns>
-</asp:GridView>--%>
-
-            <asp:ListView ID="productsList" runat="server">
+            <asp:ListView ID="productsList" runat="server" ItemType="DomainObjects.Product">
                 <LayoutTemplate>
                     <ul class="productList">
                         <asp:PlaceHolder ID="itemPlaceHolder" runat="server"></asp:PlaceHolder>
@@ -32,7 +23,7 @@
                 <ItemTemplate>
                     <li>                  
                         <img width="300" height="400" src="<%#Eval("ImagePath") %>" /><br /><p><%#Eval("ProductName") %></p><br /><p><bold>Pris: </bold><%#Eval("ProductPrice") %> kr</p>
-                        <asp:Button ID="button1" OnClick="button1_Click" Text="Detaljer" runat="server" />
+                        <a id="cat" href="/ProductDetail.aspx?id=<%#:Item.ProductName %>"<b>Produktinfo</b></a>
                     </li>
                     
                 </ItemTemplate>
