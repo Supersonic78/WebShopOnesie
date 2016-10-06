@@ -7,11 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebShopOnesie.Account
-{
-
-
-    public partial class Logout
-    {
+namespace WebShopOnesie.Account {
+    
+    
+    public partial class Logout {
     }
 }

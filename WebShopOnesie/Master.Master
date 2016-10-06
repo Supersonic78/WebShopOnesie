@@ -9,6 +9,12 @@
     <script src="scripts/jquery-3.1.1.js"></script>
     <link href="Styles/LoginStyle.css" rel="stylesheet" />
     <link href="Styles/NavbarStyle.css" rel="stylesheet" />
+<script runat="server">
+
+
+
+</script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <!-- Latest compiled and minified JavaScript -->
@@ -50,19 +56,21 @@
                                         <a id="cat" href="/Categories.aspx?id=<%# Container.DataItem %>"><%# Container.DataItem %></a>
                                     </li>
                                 </ItemTemplate>
-                            </asp:ListView>
-
+                            </asp:ListView>                           
+                            
                             <li><a runat="server" href="~/About.aspx">About</a></li>
                             <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
+                             <li><a runat="server" href="~/Checkout.aspx">Checkout</a></li>
                         </ul>
 
-                      <ul class="nav navbar-nav navbar-right">
-                        <asp:Panel ID="Panel1" class="nav navbar-nav" runat="server">
+                        <ul class="nav navbar-nav navbar-right">
+                             <asp:Panel ID="Panel1" class="nav navbar-nav" runat="server">
                         <li><a runat='server' href='~/Account/Logout.aspx'>Logout</a></li></asp:Panel>
                         <asp:Panel ID="Panel2" runat="server">
                         <li><a runat='server' href='~/Account/Register.aspx'>Register</a></li>
                         <li><a runat='server' href='~/Account/Login.aspx'>Login</a></li></asp:Panel>
-                    </ul>
+
+                        </ul>
                         <div class="navbar-form navbar-left">
                             <div class="form-group">
                                 <%--     <input id="searchField" type="text" class="form-control" placeholder="Search" runat="server" />--%>
@@ -70,7 +78,9 @@
                             </div>
                             <%--<button type="submit" class="btn btn-default">Submit</button>--%>
                             <asp:Button ID="SearchButton" CssClass="btn btn-default" runat="server" Text="Search" OnClick="SearchButton_Click" />
+             
                         </div>
+                      
 
                     </div>
                     <!-- /.navbar-collapse -->
@@ -79,6 +89,8 @@
             </nav>
 
 
+      
+
 
 
 
@@ -86,6 +98,7 @@
         </div>
 
 
+        <nav>
 
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
 
@@ -93,9 +106,9 @@
 
 
 
-        <%--   <div id="footer" class="footer">
+        <div id="footer" class="footer">
             <h1>Copyright Onesie Island Group 2005</h1>
-        </div>--%>
+        </div>
     </form>
 </body>
 </html>

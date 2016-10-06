@@ -7,10 +7,10 @@ using System.Web.UI.WebControls;
 
 namespace WebShopOnesie.Account
 {
-    public partial class Logout : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
+	public partial class Logout : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
             if (Page.IsPostBack)
             {
                 return;
@@ -18,5 +18,5 @@ namespace WebShopOnesie.Account
             Session["login"] = null;
             Response.Redirect("~/Default.aspx");
         }
-    }
+	}
 }

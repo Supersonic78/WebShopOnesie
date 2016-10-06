@@ -24,7 +24,7 @@ namespace WebShopOnesie.Account
                 user.FirstName = txtfirstName.Text;
                 user.LastName = txtLastname.Text;
                 user.Adress = txtAdress.Text;
-                user.PhoneNumber = txtphonenumber.Text;
+                user.PhoneNumber =  txtphonenumber.Text;
                 user.Email =txtEmail.Text;
                 user.Password = txtpassword.Text;
                 user.City =txtcity.Text;

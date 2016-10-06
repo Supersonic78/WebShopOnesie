@@ -15,29 +15,17 @@ namespace WebShopOnesie
             //Label1.Text = Request.QueryString["id"];
             string text = Request.QueryString["id"];
           
-              Label1.Text = $"List {text} stuff";
-          
+         
+               Label1.Text = $"List {text} stuff";
+              
                 List<Product> products = BL.BusinessLogic.GetProductsByCategoryName(text);
 
-         
+
                 productsList.DataSource = products;
                 productsList.DataBind();
 
 
 
-
-        }
-
-    
-
-        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
-        {
-            
-        }
-
-        protected void button1_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

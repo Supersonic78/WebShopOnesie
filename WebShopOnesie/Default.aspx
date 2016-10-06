@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebShopOnesie.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"> 
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -15,15 +15,15 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="images/slide1.jpg" alt="one" />
+      <img src="images/slidex1.png" alt="one" />
     </div>
 
     <div class="item">
-      <img src="images/slide2.jpg" alt="Chania"/>
+      <img src="images/slidex2.png" alt="Chania"/>
     </div>
 
     <div class="item">
-      <img src="images/slide3.jpg" alt="aa" />
+      <img src="images/slidex3.png" alt="aa" />
     </div>
 
     

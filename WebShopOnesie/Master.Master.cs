@@ -21,6 +21,17 @@ namespace WebShopOnesie
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["cart"] == null)
+            {
+                ShoppingCart shoppingCart = new ShoppingCart();
+                Session.Add("cart", shoppingCart);
+            }
+            
+            List<string> categories = BL.BusinessLogic.GetCategories();
+
+            ListView1.DataSource = categories;
+            ListView1.DataBind();
+
             if (Session["login"] != null)
             {
                 lbluser.Text = "Welcome Back: " + Session["login"].ToString();
@@ -33,18 +44,6 @@ namespace WebShopOnesie
                 Panel2.Visible = true;
                 lbluser.Text = null;
             }
-
-
-
-            List<string> categories = BL.BusinessLogic.GetCategories();
-
-            ListView1.DataSource = categories;
-            ListView1.DataBind();
-            //List<string> products = _businessLogic.GetProducts();
-
-            //ListView2.DataSource = products;
-            //ListView2.DataBind();
-
 
 
         }

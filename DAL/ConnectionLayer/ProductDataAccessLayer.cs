@@ -83,7 +83,7 @@ namespace WebShopOnesie
 
             return categories;
         }
-        public static Product GetProductByID(int productID)
+        public static Product GetProductByID(string productName)
         {
             Product product = new Product();
             string CS = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
@@ -91,7 +91,7 @@ namespace WebShopOnesie
             {
                 string sql = $@"select tblProduct.*
                     from tblProduct 
-                    where ProductID = '{productID}'";
+                    where ProductName = '{productName}'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 con.Open();
                 SqlDataReader rdr = cmd.ExecuteReader();
@@ -113,7 +113,7 @@ namespace WebShopOnesie
             string CS = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
             using (SqlConnection con = new SqlConnection(CS))
             {
-              string sql = $@"select tblProduct.*
+                string sql = $@"select tblProduct.*
                     from tblProduct join tblCategory on tblProduct.CategoryID = tblCategory.CategoryID
                     where CategoryName = '{searchText}' or ProductName = '{searchText}'";
                 SqlCommand cmd = new SqlCommand(sql, con);
@@ -133,10 +133,49 @@ namespace WebShopOnesie
             }
             return listProducts;
         }
-       public static int AddUser(Customer cust)
+        //public static Product AddProductToCart(int productID)
+        //{
+        //    Product product = new Product();
+        //    string CS = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
+        //    using (SqlConnection con = new SqlConnection(CS))
+        //    {
+        //        string sql = $@"select tblProduct.*
+        //            from tblProduct 
+        //            where ProductID = '{productID}'";
+        //        SqlCommand cmd = new SqlCommand(sql, con);
+        //        con.Open();
+        //        SqlDataReader rdr = cmd.ExecuteReader();
+        //        rdr.Read();
+
+        //        product.ProductID = Convert.ToInt32(rdr["ProductID"]);
+        //        product.ProductName = rdr["ProductName"].ToString();
+        //        product.ProductDescription = rdr["ProductDescription"].ToString();
+        //        product.ImagePath = rdr["ImagePath"].ToString();
+        //        product.ProductPrice = Convert.ToDouble(rdr["ProductPrice"]);
+
+        //    }
+        //    return product;
+        //}
+        //static void AddUser()
+        //{
+
+        //    string CS = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
+        //    using (SqlConnection con = new SqlConnection(CS))
+        //    {
+        //        string sql = "Insert Into Customer (FirstName, LastName) Values('" + fName + "','" + lName + "')";
+
+        //        SqlCommand insertCmd = new SqlCommand(sql, con);
+        //        if (insertCmd.ExecuteNonQuery() > 0)
+        //        {
+
+        //        }
+
+        //    }
+
+        //}
+        public static int AddUser(Customer cus)
         {
             int result = 0;
-            var cus = new Customer();
             string CS = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
             using (SqlConnection con = new SqlConnection(CS))
             {

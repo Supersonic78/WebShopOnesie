@@ -9,10 +9,7 @@
    
    
     
-   
-   
-    
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+  <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         <div id="oo">
             <asp:ListView ID="productsList" runat="server" ItemType="DomainObjects.Product">
                 <LayoutTemplate>
@@ -23,7 +20,7 @@
                 <ItemTemplate>
                     <li>                  
                         <img width="300" height="400" src="<%#Eval("ImagePath") %>" /><br /><p><%#Eval("ProductName") %></p><br /><p><bold>Pris: </bold><%#Eval("ProductPrice") %> kr</p>
-                        <a id="cat" href="/ProductDetail.aspx?id=<%#:Item.ProductName %>"<b>Produktinfo</b></a>
+                        <a id="cat" href="/ProductDetail.aspx?id=<%#:Item.ProductName %>"><b>Produktinfo</b></a>
                     </li>
                     
                 </ItemTemplate>
@@ -35,8 +32,6 @@
 
             </asp:ListView>
             </div>
-        
- 
         
    
     </asp:Content>

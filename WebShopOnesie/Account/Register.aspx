@@ -33,7 +33,7 @@
                         <div class="control-group">
                             <label class="control-label" for="username">Adress</label>
                             <div class="controls">
-                                <asp:TextBox ID="txtAdress" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtAdress" runat="server" class="form-control input-lg"></asp:TextBox>
                                   <p class="help-block">Adress </p>
                             </div>
                         </div>
